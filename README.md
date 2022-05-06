@@ -1,17 +1,10 @@
 
   
-
-autopilot.py: 
-Calling format: 
-•	Import process
-•	process.prepareframe(frame), process.detect(frame) etc
-		
 Functions:
 def prepareframe(frame): 
-•	changes frame (approx. 15 a second) sent over from graphics.py to grayscale. 
-•	Returns a grayscale frame. 
-def detect(frame): 
-•	runs a haar cascade classifier on grayscale frame. 
+•	Returns a grayscale any frame. 
+def detecteyes(frame_VL): 
+•	runs a haar cascade classifier on grayscale visible light camera frame. 
 •	Returns ‘eyes’, which will have the dimensions in x,y,w,h format.  
 def drawrect(frame,eyes):
 •	based on ‘eyes’ detected in def detect(frame) a rectangle is drawn on frame.  
@@ -29,6 +22,3 @@ def drawrectIR(frame_ir_eyes):
 def puttext(frame,frame_ir,eyes,temperature): 
 •	Temperature is placed above surrounding rectangle. 
 •	Returns the two frame types with temperature placed above the rectangles.
-
-Future ideas:
-****manual.py 
